@@ -1,7 +1,7 @@
 ﻿// 2.2
 
 
-String Crat(int num, int num2)
+string Crat(int num, int num2)
 
 {
     if(num % num2 == 0)
