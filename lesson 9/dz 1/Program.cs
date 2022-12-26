@@ -1,14 +1,12 @@
-﻿//  Задайте значения M и N. Напишите программу, которая выведет все чётные натуральные числа в промежутке от M до N.
+﻿// Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+// M = 1; N = 15 -> 120
+// M = 4; N = 8. -> 30
 
-
-void NaturNum(int m, int n)
+int SumNums (int M, int N)
 {
-    if (n % 2 != 0)
-        n = n - 1;
-    if (n < m) return;
-    NaturNum(m, n - 2);
-    Console.Write($" {n} ");
+    if (N < M) return 0;
+    return SumNums(M, N - 1) + N;
 }
 
-NaturNum(1, 5);
-NaturNum(4, 8);
+Console.WriteLine (SumNums(1, 15)); 
+Console.WriteLine (SumNums(4, 8));
